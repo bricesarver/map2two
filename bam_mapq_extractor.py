@@ -62,7 +62,7 @@ def main(one, two):
     print("writing errors...")
     with open(one.split(".")[0] + ".errors.txt", "w") as errorfile:
         for key in errors:
-        	errorfile.write(key + "\t" + errors[key] + "\n")
+        	errorfile.write(key + "\n")
 
 if __name__ == "__main__":
     one = sys.argv[1]

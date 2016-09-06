@@ -48,7 +48,7 @@ def main(one, two):
     ten = [key for key in first if len(first[key]) == 10]
     
     print("writing PE keys in both...")
-    with open(one.split(".")[0] + "results.20.txt", "w") as results:
+    with open(one.split(".")[0] + ".results.20.txt", "w") as results:
         results.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format("readID", "mapq.1", "qlen.1", "chr.1", "start.1", "end.1", "mapq.2", "qlen.2", "chr.2", "start.2", "end.2", "mapq.3", "qlen.3", "chr.3", "start.3", "end.3", "mapq.4", "qlen.4", "chr.4", "start.4", "end.4"))
         for key in twenty:
             results.write(key + "\t" + "\t".join([str(x) for x in first[key]]) + "\n")
